@@ -56,6 +56,7 @@ export const PERMISSIONS = {
   INTEGRATION_HUB_EDIT: 'integration.settings.edit',
   INTEGRATION_HUB_TEST: 'integration.settings.test',
   INTEGRATION_HUB_SECRETS_WRITE: 'integration.settings.secrets.write',
+  INTEGRATIONS_MANAGE: 'integrations.manage',
 
   // Client Management settings
   CLIENT_SETTINGS_VIEW: 'client.settings.view',
