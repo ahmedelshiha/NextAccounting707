@@ -488,7 +488,7 @@ export class EntityService {
             entityId,
             userId: "system", // System user for verification jobs
             action: "VERIFY_REGISTRATIONS",
-            changes: verificationResults,
+            changes: (verificationResults as any) as Prisma.InputJsonValue,
           },
         });
       });
@@ -523,6 +523,10 @@ export class EntityService {
           include: {
             periods: true,
           },
+        },
+        auditLogs: {
+          orderBy: { createdAt: "desc" },
+          take: 10,
         },
       },
     });
