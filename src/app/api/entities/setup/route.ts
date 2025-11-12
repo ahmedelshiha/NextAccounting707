@@ -6,6 +6,7 @@ import { logger } from "@/lib/logger";
 import prisma from "@/lib/prisma";
 import { z } from "zod";
 import crypto from "crypto";
+import { initializeVerificationJob, enqueueVerificationJob } from "@/lib/jobs/entity-setup";
 
 // Validation schema for setup wizard
 const setupWizardSchema = z.object({
